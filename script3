@@ -1,22 +1,31 @@
 #!/bin/bash
 # assign variables
 ACTION=${1}
+function create_file() {
+touch "${1}-12345"
+}
 function display_help() {
 cat << EOF
-Usage: ${0} {-h|--help}
+Usage: ${0} {-c|--create|-h|--help} <filename>
 OPTIONS:
+	-c | --create	Create a new file
 	-h | --help	Display the command help
 Examples:
+	Create a new file:
+		$ ${0} -c foo.txt
 	Display help:
 		$ ${0} -h
 EOF
 }
 
 case "$ACTION" in
-	-h|--help)
+	-h| --help)
 		display_help
 		;;
+	-c| --create)
+		create_file "${2:-server}"
+		;;
 	*)
-	echo "Usage ${0} {-h}"
+	echo "Usage ${0} {-c|-h}"
 	exit 1
 esac
