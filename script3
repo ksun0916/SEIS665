@@ -1,0 +1,22 @@
+#!/bin/bash
+# assign variables
+ACTION=${1}
+function display_help() {
+cat << EOF
+Usage: ${0} {-h|--help}
+OPTIONS:
+	-h | --help	Display the command help
+Examples:
+	Display help:
+		$ ${0} -h
+EOF
+}
+
+case "$ACTION" in
+	-h|--help)
+		display_help
+		;;
+	*)
+	echo "Usage ${0} {-h}"
+	exit 1
+esac
