@@ -2,9 +2,9 @@
 # assign variables
 
 ACTION=${1}
-version=1.0.1
+version="1.0.1"
 function show_version() {
-$version
+echo $version
 }
 function delete_file() {
 rm "${1}-12345"
