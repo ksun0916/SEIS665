@@ -16,7 +16,7 @@ if [ -z "$1" ]
 		function remove_file() {
 			sudo service nginx stop
 			rm -fr /usr/share/nginx/html/"${1}"
-			yum remove nginx -y
+			sudo yum remove nginx -y
 			}
 		function display_help() {
 			cat << EOF
