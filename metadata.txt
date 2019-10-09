@@ -1,6 +1,6 @@
 ip-172-31-47-76.ec2.internal{
   "Code" : "Success",
-  "LastUpdated" : "2019-10-06T20:32:44Z",
+  "LastUpdated" : "2019-10-09T22:44:07Z",
   "InstanceProfileArn" : "arn:aws:iam::362293118430:instance-profile/S3-full-access",
   "InstanceProfileId" : "AIPAVIWS2IXPD2GFIB4G4"
 }assignment3
