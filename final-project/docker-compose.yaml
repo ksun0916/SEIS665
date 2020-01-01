@@ -1,6 +1,0 @@
-version: '2'
-services:
-  finalweb1:
-    image: phpweb:1.0
-    ports:
-      - "80:80"
