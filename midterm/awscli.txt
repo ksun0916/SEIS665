@@ -1,0 +1,199 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "Monitoring": {
+                        "State": "disabled"
+                    }, 
+                    "PublicDnsName": "ec2-54-172-43-164.compute-1.amazonaws.com", 
+                    "State": {
+                        "Code": 16, 
+                        "Name": "running"
+                    }, 
+                    "EbsOptimized": false, 
+                    "LaunchTime": "2019-10-18T23:26:39.000Z", 
+                    "PublicIpAddress": "54.172.43.164", 
+                    "PrivateIpAddress": "172.31.83.83", 
+                    "ProductCodes": [], 
+                    "VpcId": "vpc-8bc681f1", 
+                    "CpuOptions": {
+                        "CoreCount": 1, 
+                        "ThreadsPerCore": 1
+                    }, 
+                    "StateTransitionReason": "", 
+                    "InstanceId": "i-0309c05be0f41a8b8", 
+                    "EnaSupport": true, 
+                    "ImageId": "ami-0b69ea66ff7391e80", 
+                    "PrivateDnsName": "ip-172-31-83-83.ec2.internal", 
+                    "KeyName": "midterm-exam", 
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "midterm", 
+                            "GroupId": "sg-0d85b8f80a906bbf1"
+                        }
+                    ], 
+                    "ClientToken": "", 
+                    "SubnetId": "subnet-e63809c8", 
+                    "InstanceType": "t2.micro", 
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    }, 
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use", 
+                            "MacAddress": "12:69:8b:5b:62:54", 
+                            "SourceDestCheck": true, 
+                            "VpcId": "vpc-8bc681f1", 
+                            "Description": "", 
+                            "NetworkInterfaceId": "eni-0abe777e0ce0e1bfc", 
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-31-83-83.ec2.internal", 
+                                    "PrivateIpAddress": "172.31.83.83", 
+                                    "Primary": true, 
+                                    "Association": {
+                                        "PublicIp": "54.172.43.164", 
+                                        "PublicDnsName": "ec2-54-172-43-164.compute-1.amazonaws.com", 
+                                        "IpOwnerId": "amazon"
+                                    }
+                                }
+                            ], 
+                            "PrivateDnsName": "ip-172-31-83-83.ec2.internal", 
+                            "Attachment": {
+                                "Status": "attached", 
+                                "DeviceIndex": 0, 
+                                "DeleteOnTermination": true, 
+                                "AttachmentId": "eni-attach-00aee74ec85a2464d", 
+                                "AttachTime": "2019-10-18T23:26:39.000Z"
+                            }, 
+                            "Groups": [
+                                {
+                                    "GroupName": "midterm", 
+                                    "GroupId": "sg-0d85b8f80a906bbf1"
+                                }
+                            ], 
+                            "Ipv6Addresses": [], 
+                            "OwnerId": "362293118430", 
+                            "PrivateIpAddress": "172.31.83.83", 
+                            "SubnetId": "subnet-e63809c8", 
+                            "Association": {
+                                "PublicIp": "54.172.43.164", 
+                                "PublicDnsName": "ec2-54-172-43-164.compute-1.amazonaws.com", 
+                                "IpOwnerId": "amazon"
+                            }
+                        }
+                    ], 
+                    "SourceDestCheck": true, 
+                    "Placement": {
+                        "Tenancy": "default", 
+                        "GroupName": "", 
+                        "AvailabilityZone": "us-east-1d"
+                    }, 
+                    "Hypervisor": "xen", 
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda", 
+                            "Ebs": {
+                                "Status": "attached", 
+                                "DeleteOnTermination": true, 
+                                "VolumeId": "vol-09f2ebf118295d3b9", 
+                                "AttachTime": "2019-10-18T23:26:40.000Z"
+                            }
+                        }
+                    ], 
+                    "Architecture": "x86_64", 
+                    "RootDeviceType": "ebs", 
+                    "RootDeviceName": "/dev/xvda", 
+                    "VirtualizationType": "hvm", 
+                    "Tags": [
+                        {
+                            "Value": "midterm", 
+                            "Key": "Name"
+                        }
+                    ], 
+                    "HibernationOptions": {
+                        "Configured": false
+                    }, 
+                    "AmiLaunchIndex": 0
+                }
+            ], 
+            "ReservationId": "r-0547a0a48b8e3535a", 
+            "Groups": [], 
+            "OwnerId": "362293118430"
+        }
+    ]
+}
+{
+    "SecurityGroups": [
+        {
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1", 
+                    "PrefixListIds": [], 
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ], 
+                    "UserIdGroupPairs": [], 
+                    "Ipv6Ranges": []
+                }
+            ], 
+            "Description": "midterm created 2019-10-18T18:21:56.320-05:00", 
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [], 
+                    "FromPort": 80, 
+                    "IpRanges": [
+                        {
+                            "Description": "HTTP from St. Thomas ", 
+                            "CidrIp": "140.209.0.0/16"
+                        }
+                    ], 
+                    "ToPort": 80, 
+                    "IpProtocol": "tcp", 
+                    "UserIdGroupPairs": [], 
+                    "Ipv6Ranges": []
+                }, 
+                {
+                    "PrefixListIds": [], 
+                    "FromPort": 22, 
+                    "IpRanges": [
+                        {
+                            "Description": "SSH from my IP", 
+                            "CidrIp": "140.209.14.80/32"
+                        }
+                    ], 
+                    "ToPort": 22, 
+                    "IpProtocol": "tcp", 
+                    "UserIdGroupPairs": [], 
+                    "Ipv6Ranges": []
+                }, 
+                {
+                    "PrefixListIds": [], 
+                    "FromPort": 443, 
+                    "IpRanges": [
+                        {
+                            "Description": "HTTPS from anywhere", 
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ], 
+                    "ToPort": 443, 
+                    "IpProtocol": "tcp", 
+                    "UserIdGroupPairs": [], 
+                    "Ipv6Ranges": [
+                        {
+                            "CidrIpv6": "::/0", 
+                            "Description": "HTTPS from anywhere"
+                        }
+                    ]
+                }
+            ], 
+            "GroupName": "midterm", 
+            "VpcId": "vpc-8bc681f1", 
+            "OwnerId": "362293118430", 
+            "GroupId": "sg-0d85b8f80a906bbf1"
+        }
+    ]
+}

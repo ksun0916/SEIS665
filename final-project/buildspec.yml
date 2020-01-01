@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
+      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"      
+  pre_build:
+    commands:
+      - echo test CodeBuild docker runtime
+      - docker info
+  build:
+    commands:
+      - echo Build the website
+      - docker build -t phpweb:1.0 .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Saving the Docker image...
+      - docker save phpweb:1.0 > finalweb.tar
+      
+artifacts:
+  files:
+    - '**/*'
+  name: docker-web-$(date +%y%m%d%H%M).zip
